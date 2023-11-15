@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { FadeLoader } from 'react-spinners';
- function Preloader() {
+
+const Loader = () => {
   const [loadingText, setLoadingText] = useState('Loading...');
 
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoadingText('Almost there...');
-    }, 2000); // Set the delay time in milliseconds (e.g., 2000ms for 2 seconds)
+    }, 2000);
 
-    return () => clearTimeout(delay); // Clear the timeout on component unmount
+    return () => clearTimeout(delay);
   }, []);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-     
-     <FadeLoader color="#db2777" />
+      <FadeLoader color="#db2777" />
       <p className="text-gray-500">{loadingText}</p>
     </div>
   );
-}
-export default Preloader;
+};
+
+export default Loader;

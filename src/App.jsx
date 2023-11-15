@@ -10,7 +10,7 @@ import Team from './pages/TeamPage';
 import Contact from './pages/ContactPage';
 import Startup from './pages/StartupPage';
 import Scroller from "./components/Scroller";
-import Preloader from './components/Preloader';
+import Loader from './components/Loader';
 import EventPage from './pages/EventPage';
 import SinglePage from './pages/SinglePage';
 import NotFound from './components/NotFound'; 
@@ -28,7 +28,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <Preloader />;
+    return <Loader />;
   }
 
   return (
