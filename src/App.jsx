@@ -9,9 +9,7 @@ import myFooter from "./components/myFooter";
 import Team from './pages/TeamPage';
 import Contact from './pages/ContactPage';
 import Startup from './pages/StartupPage';
-import Gototop from "./components/Gototop";
-
-
+import Scroller from "./components/Scroller";
 import Preloader from './components/Preloader';
 import EventPage from './pages/EventPage';
 import SinglePage from './pages/SinglePage';
@@ -46,7 +44,7 @@ function App() {
         <Route path="/blogs/:id" element={<SinglePage />} /> 
         <Route path="*" element={<NotFound />} /> {/* This matches any unmatched path */}
       </Routes>
-      <Gototop />
+      <Scroller />
       <myFooter />
     </Router>
   );
