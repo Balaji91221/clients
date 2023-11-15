@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 
-function Gototop() {
+const Gototop =()=> {
   const [showButton, setShowButton] = useState(false);
 
   const handleScroll = () => {
