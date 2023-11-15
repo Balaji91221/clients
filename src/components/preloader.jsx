@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FadeLoader } from 'react-spinners';
-export default function Preloader() {
+ function Preloader() {
   const [loadingText, setLoadingText] = useState('Loading...');
 
   useEffect(() => {
@@ -19,3 +19,4 @@ export default function Preloader() {
     </div>
   );
 }
+export default Preloader;
