@@ -2,7 +2,7 @@ import React from "react";
 import banner from "../../assets/Home/ameet.jpeg";
 import { Link } from "react-router-dom";
 
-function dir() {
+function Dir() {
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white">
       <div className="text-center mb-8">
@@ -40,4 +40,4 @@ function dir() {
   );
 }
 
-export default dir;
+export default Dir;

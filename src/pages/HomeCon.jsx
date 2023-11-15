@@ -2,7 +2,7 @@ import React from 'react'
 import HomePage from '../components/Home/Home'
 import Dir from '../components/Home/dir'
 import Galleryimages from '../components/Home/Galleryimages'
-import Accordion from '../components/Home/accorditin'
+import Accordion from '../components/Home/DefaultAccordion'
 function HomeCon() {
   return (
     <div>

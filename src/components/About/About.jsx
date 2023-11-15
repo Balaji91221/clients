@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaGreaterThan } from "react-icons/fa";
 import { AiTwotoneHome } from "react-icons/ai";
-function Breadcrumb() {
+function About() {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
@@ -61,4 +61,4 @@ function Breadcrumb() {
   );
 }
 
-export default Breadcrumb;
+export default About;

@@ -14,7 +14,7 @@ export default function Preloader() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
      
-     <FadeLoader color="#36d7b7" />
+     <FadeLoader color="#db2777" />
       <p className="text-gray-500">{loadingText}</p>
     </div>
   );

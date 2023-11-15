@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 
-function GoToTopButton() {
+function Gototop() {
   const [showButton, setShowButton] = useState(false);
 
   const handleScroll = () => {
@@ -37,4 +37,4 @@ function GoToTopButton() {
   );
 }
 
-export default GoToTopButton;
+export default Gototop;

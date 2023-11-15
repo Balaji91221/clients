@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'flowbite-react';
 
-const StartupCard = () => {
+const Startuplist = () => {
   const startups = [
     {
       name: 'Digital Fortress',
@@ -74,4 +74,4 @@ const StartupCard = () => {
   );
 };
 
-export default StartupCard;
+export default Startuplist;

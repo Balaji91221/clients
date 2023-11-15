@@ -5,7 +5,7 @@ import {FaBook} from 'react-icons/fa'
 
 import banner from "../../assets/logo.png";
 
-function Card() {
+function Services() {
   return (
     <div>
       {/*  */}
@@ -109,4 +109,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Services;

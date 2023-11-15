@@ -16,7 +16,7 @@ import avin from "../../assets/Team/avin.png"
 import deep from "../../assets/Team/deep.png"
 import kupp from "../../assets/Team/kupp.png"
 import renu from "../../assets/Team/renu.png"
-function ProfileCard() {
+function Members() {
   const initialDisplayCount = 3; // Number of team members to display initially
   const [displayCount, setDisplayCount] = useState(initialDisplayCount);
 
@@ -151,4 +151,4 @@ function ProfileCard() {
   );
 }
 
-export default ProfileCard;
+export default Members;

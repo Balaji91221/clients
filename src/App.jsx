@@ -5,15 +5,15 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/HomeCon';
 import About from './pages/AboutPage';
-import Footer from './components/myFooter';
+import Footer from './components/MyFooter';
 import Team from './pages/TeamPage';
 import Contact from './pages/ContactPage';
 import Startup from './pages/StartupPage';
-import GoToTopButton from './components/gototop';
-import Preloader from './components/preloader';
+import GoToTopButton from './components/Gototop';
+import Preloader from './components/Preloader';
 import EventPage from './pages/EventPage';
 import SinglePage from './pages/SinglePage';
-import NotFound from './components/404page'; 
+import NotFound from './components/NotFound'; 
 
 
 function App() {
