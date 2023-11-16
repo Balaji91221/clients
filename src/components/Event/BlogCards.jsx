@@ -1,39 +1,47 @@
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import event from '../../assets/Events/event-1.png';
+import event2 from '../../assets/Events/event-2.png';
+import event3 from '../../assets/Events/event-3.png';
+import event4 from '../../assets/Events/event-4.png';
+import event5 from '../../assets/Events/event-5_1.png';
+import event6 from '../../assets/Events/event-6.png';
+import event7 from '../../assets/Events/event-7.png';
+import event8 from '../../assets/Events/event-8.png';
 
 const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
   const images = [
     {
       id: 1,
-      image: '/src/assets/Events/event-1.png'
+      image: event
     },
     {
       id: 2,
-      image: '/src/assets/Events/event-2.png'
+      image: event2
     },
     {
       id: 3,
-      image: '/src/assets/Events/event-3.png'
+      image: event3
     },
     {
       id: 4,
-      image: '/src/assets/Events/event-4.png'
+      image:  event4
     },
     {
       id: 5,
-      image: '/src/assets/Events/event-5_1.png'
+      image: event5
     },{
       id: 6,
-      image: '/src/assets/Events/event-6.png'
+      image: event6
     },
     {
       id: 7,
-      image: '/src/assets/Events/event-7.png'
+      image: event7
     },
     {
       id: 8,
-      image: '/src/assets/Events/event-8.png'
+      image: event8
     }
   ];
 
