@@ -5,7 +5,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './pages/HomeCon';
 import About from './pages/AboutPage';
-import myFooter from "./components/myFooter";
+import Bottombar from "./components/Bottombar";
 import Team from './pages/TeamPage';
 import Contact from './pages/ContactPage';
 import Startup from './pages/StartupPage';
@@ -45,7 +45,7 @@ function App() {
         <Route path="*" element={<NotFound />} /> {/* This matches any unmatched path */}
       </Routes>
       <Scroller />
-      <myFooter />
+      <Bottombar />
     </Router>
   );
 }

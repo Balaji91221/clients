@@ -3,7 +3,7 @@ import {  BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 import { Footer } from 'flowbite-react';
 import logo from '../assets/logo.png';
 
-function myFooter() {
+function Bottombar() {
   return (
     <Footer container>
     <div className="w-full">
@@ -93,4 +93,4 @@ function myFooter() {
   )
 }
 
-export default myFooter;
+export default Bottombar;
