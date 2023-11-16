@@ -1,6 +1,6 @@
 import React from 'react'
 import HomePage from '../components/Home/Home'
-import Dir from '../components/Home/dir'
+import Dir from '../components/Home/Dir'
 
 import Accordion from '../components/Home/DefaultAccordion'
 function HomeCon() {
