@@ -1,6 +1,6 @@
 # VT-BIF Website
 
-The VT-BIF website showcases the Virtual Tech Business Incubator and Fund, providing support for tech startups with resources, mentorship, and funding opportunities.
+The VT-BIF website showcases the VIT-AP TECHNOLOGY BUSINESS INCUBATION FOUNDATION providing support for tech startups with resources, mentorship, and funding opportunities.
 
 # Dynamic Website with Vite, React, Flowbite, Node.js, and Express.js
 
