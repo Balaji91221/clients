@@ -6,7 +6,7 @@ The VT-BIF website showcases the VIT-AP TECHNOLOGY BUSINESS INCUBATION FOUNDATIO
 
 Developed a dynamic website using [Vite](https://vitejs.dev/), [React](https://reactjs.org/), and the [Flowbite](https://flowbite.com/) UI library for a modern and responsive user interface. The backend is powered by [Node.js](https://nodejs.org/) and [Express.js](https://expressjs.com/), providing a robust and scalable server-side solution. This project seamlessly integrates frontend and backend technologies, offering a dynamic and engaging web experience.
 
-# Explore the live demo: [VTBIF](https://b19c0300.clients-dco.pages.dev/)
+# Explore the live demo: [VTBIF](https://clients-dco.pages.dev/)
 
 ## Features
 
