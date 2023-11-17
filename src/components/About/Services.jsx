@@ -16,8 +16,10 @@ function Services() {
           </p>
           <p className="text-black-500 text-lg font-semibold ">Why You Should Join VTBIF Incubation Center Innovate & Ignite</p>
         </div>
-
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center m-4 gap-12">
+        <div>
+            <img src={banner} alt="" className="h-80 rounded-md py-12" />
+          </div>
           <div className="md:w-3/5 mx-auto  ">
             <h2 className="text-4xl text-neutralDGrey  font-semibold mb-4 md-4/5">
               VTBIF
@@ -36,9 +38,7 @@ function Services() {
               product prototypes are supported at the centre.
             </p>
           </div>
-          <div>
-            <img src={banner} alt="" className="h-80 rounded-md" />
-          </div>
+         
         </div>
       </div>
 

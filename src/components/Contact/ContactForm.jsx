@@ -8,7 +8,6 @@ function ContactForm() {
       email: 'director.iiec@vitap.ac.in',
       phone: '123-456-7890',
     },
- 
   ];
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -38,7 +37,7 @@ function ContactForm() {
               Fill out the form below to get in touch with us.
             </p>
             <form action="#" className="space-y-8" onSubmit={handleSubmit}>
-              <div className="transition-transform transform hover:scale-105">
+              <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Your email
                 </label>
@@ -50,7 +49,7 @@ function ContactForm() {
                   required
                 />
               </div>
-              <div className="transition-transform transform hover:scale-105">
+              <div>
                 <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Subject
                 </label>
@@ -62,7 +61,7 @@ function ContactForm() {
                   required
                 />
               </div>
-              <div className="sm:col-span-2 transition-transform transform hover:scale-105">
+              <div className="sm:col-span-2">
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
                   Your message
                 </label>
@@ -96,7 +95,6 @@ function ContactForm() {
                       {director.phone}
                     </p>
                   </div>
-                  
                 </div>
               ))}
             </div>

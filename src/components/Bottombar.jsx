@@ -5,8 +5,8 @@ import logo from '../assets/logo.png';
 
 function Bottombar() {
   return (
-    <Footer container>
-    <div className="w-full">
+    <Footer container className='bg-slate-50'>
+    <div className="w-full ">
       <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
         <div className='space-y-4 mb-8'>
         <a
@@ -69,10 +69,7 @@ function Bottombar() {
           year={2023}
         />
         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-          <Footer.Icon
-            href="#"
-            icon={BsFacebook}
-          />
+         
           <Footer.Icon
             href="#"
             icon={BsInstagram}
@@ -81,10 +78,7 @@ function Bottombar() {
             href="#"
             icon={BsTwitter}
           />
-          <Footer.Icon
-            href="#"
-            icon={BsGithub}
-          />
+         
         
         </div>
       </div>
