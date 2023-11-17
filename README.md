@@ -1,8 +1,22 @@
-# React + Vite
+# VT-BIF Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The VT-BIF website showcases the Virtual Tech Business Incubator and Fund, providing support for tech startups with resources, mentorship, and funding opportunities.
 
-Currently, two official plugins are available:
+# Dynamic Website with Vite, React, Flowbite, Node.js, and Express.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Developed a dynamic website using [Vite](https://vitejs.dev/), [React](https://reactjs.org/), and the [Flowbite](https://flowbite.com/) UI library for a modern and responsive user interface. The backend is powered by [Node.js](https://nodejs.org/) and [Express.js](https://expressjs.com/), providing a robust and scalable server-side solution. This project seamlessly integrates frontend and backend technologies, offering a dynamic and engaging web experience.
+
+# Explore the live demo: [VTBIF](https://b19c0300.clients-dco.pages.dev/)
+
+## Features
+
+- Informative landing page
+- Services and resources details
+- Startup success stories
+- Upcoming events and news
+
+## Getting Started
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/your-username/vt-bif-website.git
