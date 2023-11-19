@@ -67,8 +67,8 @@ function Navbar() {
           {/* btn */}
           <div className="space-x-12 hidden lg:flex items-center">
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6ZOvskEBbxZW1_G2iEMujv3U8Q1kbgyEZpr6Mk7KGEaKYKg/viewform" target="_blank" rel="noopener noreferrer">
-    <button className="bg-pink-500 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-brandPrimary">
-      Apply Now
+    <button className="bg-blue-500 text-white font-medium py-2 px-4 transition-all duration-300 rounded hover:bg-blue-900">
+    Register Now
     </button>
   </a>
 </div>
@@ -76,28 +76,35 @@ function Navbar() {
 
           {/* menu for only mobile view */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="focus:outline-none focus:text-gray-500 text-neutralDGrey">
+            <button onClick={toggleMenu} className=" focus:text-gray-500 rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-neutralDGrey">
               {isMenuOpen ? (
-                <FaXmark className="h-6 w-6 " />
+                <FaXmark className="h-8 w-8 " />
               ) : (
-                <FaBars className="h-6 w-6 " />
+                <FaBars className="h-8 w-8 " />
               )}
             </button>
           </div>
         </div>
 
         {/* navitems for mobile */}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-black ${isMenuOpen ? "block fixed top-2.5 left-0 right-0" : "hidden "}`}>
+        <div className={`space-y-4 px-4 mt-16 py-7 bg-white text-black ${isMenuOpen ? "block fixed top-2.5 left-0 right-0" : "hidden "}`}>
           {navItems.map(({ link, path }) => (
             <RouterLink // Use RouterLink for mobile navigation links
               to={path}
               key={path}
-              className="block text-base text-white hover:text-brandPrimary first:font-medium"
+              className=" px-2 block text-base  font-bold text-black hover:text-brandPrimary "
             >
               {link}
+              
             </RouterLink>
+            
           ))}
+          
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6ZOvskEBbxZW1_G2iEMujv3U8Q1kbgyEZpr6Mk7KGEaKYKg/viewform" target="_blank" rel="noopener noreferrer"  className="block w-full bg-gray-50 px-5 py-3 text-center font-bold text-blue-500 hover:bg-gray-100">
+              Register Now
+            </a>
         </div>
+
       </nav>
     </header>
   );
