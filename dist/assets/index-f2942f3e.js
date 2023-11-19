@@ -9032,18 +9032,21 @@ function Navbar() {
             },
             path
           )) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-x-12 hidden lg:flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://docs.google.com/forms/d/e/1FAIpQLSd6ZOvskEBbxZW1_G2iEMujv3U8Q1kbgyEZpr6Mk7KGEaKYKg/viewform", target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "bg-pink-500 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-brandPrimary", children: "Apply Now" }) }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: toggleMenu, className: "focus:outline-none focus:text-gray-500 text-neutralDGrey", children: isMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaXmark, { className: "h-6 w-6 " }) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaBars$1, { className: "h-6 w-6 " }) }) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-x-12 hidden lg:flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://docs.google.com/forms/d/e/1FAIpQLSd6ZOvskEBbxZW1_G2iEMujv3U8Q1kbgyEZpr6Mk7KGEaKYKg/viewform", target: "_blank", rel: "noopener noreferrer", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { className: "bg-blue-500 text-white font-medium py-2 px-4 transition-all duration-300 rounded hover:bg-blue-900", children: "Register Now" }) }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: toggleMenu, className: " focus:text-gray-500 rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 text-neutralDGrey", children: isMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaXmark, { className: "h-8 w-8 " }) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaBars$1, { className: "h-8 w-8 " }) }) })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `space-y-4 px-4 mt-16 py-7 bg-black ${isMenuOpen ? "block fixed top-2.5 left-0 right-0" : "hidden "}`, children: navItems.map(({ link, path }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Link,
-          {
-            to: path,
-            className: "block text-base text-white hover:text-brandPrimary first:font-medium",
-            children: link
-          },
-          path
-        )) })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: `space-y-4 px-4 mt-16 py-7 bg-white text-black ${isMenuOpen ? "block fixed top-2.5 left-0 right-0" : "hidden "}`, children: [
+          navItems.map(({ link, path }) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Link,
+            {
+              to: path,
+              className: " px-2 block text-base  font-bold text-black hover:text-brandPrimary ",
+              children: link
+            },
+            path
+          )),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://docs.google.com/forms/d/e/1FAIpQLSd6ZOvskEBbxZW1_G2iEMujv3U8Q1kbgyEZpr6Mk7KGEaKYKg/viewform", target: "_blank", rel: "noopener noreferrer", className: "block w-full bg-gray-50 px-5 py-3 text-center font-bold text-blue-500 hover:bg-gray-100", children: "Register Now" })
+        ] })
       ]
     }
   ) });
