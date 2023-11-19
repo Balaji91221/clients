@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaUser,  } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import Sidebar from '../components/Event/Sidebar';
-import {BsPeopleFill} from 'react-icons/bs'
+import { BsPeopleFill } from 'react-icons/bs';
 
 const SinglePage = () => {
   const { id } = useParams();
@@ -13,6 +13,9 @@ const SinglePage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
+        }
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -43,10 +46,9 @@ const SinglePage = () => {
           <h2 className='text-3xl font-bold mb-4 text-blue-600 cursor-pointer'>{title}</h2>
           <p className='mb-3 text-gray-600'><FaUser className='inline-flex items-center mr-2' />  {`Event Coordinator: ${author}`} | {published_date}</p>
           <p className='mb-6 text-gray-600'>
-  <BsPeopleFill className='inline-flex items-center mr-2' />
-  {`participants: ${Participants}`}
-</p>
-
+            <BsPeopleFill className='inline-flex items-center mr-2' />
+            {`participants: ${Participants}`}
+          </p>
           <p className='text-sm text-gray-500 mb-6'>{content} </p>
           <div className='text-base text-gray-500'>
             {/* Your content goes here */}

@@ -31,7 +31,6 @@ function Navbar() {
     { link: "About", path: "/about" },
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
-  
     { link: "Event", path: "/EventPage" },
     { link: "Contact", path: "/contact" },
   ];

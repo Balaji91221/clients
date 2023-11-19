@@ -19867,6 +19867,9 @@ const SinglePage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
+        }
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -19937,8 +19940,7 @@ function App() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/EventPage", element: /* @__PURE__ */ jsxRuntimeExports.jsx(EventPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blogs/:id", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SinglePage, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) }),
-      " "
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Scroller, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Bottombar, {})

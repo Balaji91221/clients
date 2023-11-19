@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -13,8 +12,7 @@ import Scroller from "./components/Scroller";
 import Loader from './components/Loader';
 import EventPage from './pages/EventPage';
 import SinglePage from './pages/SinglePage';
-import NotFound from './components/NotFound'; 
-
+import NotFound from './components/NotFound';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -41,8 +39,8 @@ function App() {
         <Route path="/startup" element={<Startup />} />
         <Route path="/EventPage" element={<EventPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blogs/:id" element={<SinglePage />} /> 
-        <Route path="*" element={<NotFound />} /> {/* This matches any unmatched path */}
+        <Route path="/blogs/:id" element={<SinglePage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Scroller />
       <Bottombar />
