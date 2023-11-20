@@ -19939,7 +19939,7 @@ function App() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/startup", element: /* @__PURE__ */ jsxRuntimeExports.jsx(StartupPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/EventPage", element: /* @__PURE__ */ jsxRuntimeExports.jsx(EventPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/blogs/:id", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SinglePage, {}) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blogs/:id", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SinglePage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Scroller, {}),

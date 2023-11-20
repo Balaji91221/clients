@@ -39,7 +39,7 @@ function App() {
         <Route path="/startup" element={<Startup />} />
         <Route path="/EventPage" element={<EventPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/blogs/:id" element={<SinglePage />} />
+        <Route path="blogs/:id" element={<SinglePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Scroller />
