@@ -12,7 +12,7 @@ const SinglePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://eventpage-k3r6.onrender.com/EventPage/${id}`);
+        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
         }

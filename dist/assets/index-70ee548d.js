@@ -8978,6 +8978,116 @@ function FaBars$1(props) {
 function FaXmark(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 384 512" }, "child": [{ "tag": "path", "attr": { "d": "M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" } }] })(props);
 }
+function FaBars(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" } }] })(props);
+}
+function FaBook(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z" } }] })(props);
+}
+function FaEnvelope(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" } }] })(props);
+}
+function FaGreaterThan(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 384 512" }, "child": [{ "tag": "path", "attr": { "d": "M365.52 209.85L59.22 67.01c-16.06-7.49-35.15-.54-42.64 15.52L3.01 111.61c-7.49 16.06-.54 35.15 15.52 42.64L236.96 256.1 18.49 357.99C2.47 365.46-4.46 384.5 3.01 400.52l13.52 29C24 445.54 43.04 452.47 59.06 445l306.47-142.91a32.003 32.003 0 0 0 18.48-29v-34.23c-.01-12.45-7.21-23.76-18.49-29.01z" } }] })(props);
+}
+function FaPhone(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" } }] })(props);
+}
+function FaUser(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" } }] })(props);
+}
+const Sidebar = () => {
+  const [popularBlog, setPopularBlog] = reactExports.useState([]);
+  reactExports.useEffect(() => {
+    fetch("https://vtbif-express.onrender.com/blogs").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold px-4", children: "Latest Blogs" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(0, 5).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
+          "Read now ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
+        ] })
+      ] }, blog.id)) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mt-20 px-4", children: "Popular Now" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(6, 10).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
+          "Read now ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
+        ] })
+      ] }, blog.id)) })
+    ] }) })
+  ] });
+};
+function BsFlagFill(props) {
+  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001" } }] })(props);
+}
+function BsInstagram(props) {
+  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" } }] })(props);
+}
+function BsPeopleFill(props) {
+  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" } }] })(props);
+}
+function BsTwitter(props) {
+  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" } }] })(props);
+}
+const SinglePage = () => {
+  const { id: id2 } = useParams();
+  const [data, setData] = reactExports.useState({});
+  const [loading, setLoading] = reactExports.useState(true);
+  reactExports.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [id2]);
+  const { title, author, content, image, Participants, published_date } = data;
+  if (loading) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Loading..." });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: "Single Event" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl  my-12 flex flex-col md:flex-row gap-12 m-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: image, alt: "", className: "mx-auto w-full rounded mb-5" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-4 text-blue-600 cursor-pointer", children: title }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-3 text-gray-600", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FaUser, { className: "inline-flex items-center mr-2" }),
+          "  ",
+          `Event Coordinator: ${author}`,
+          " | ",
+          published_date
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-6 text-gray-600", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(BsPeopleFill, { className: "inline-flex items-center mr-2" }),
+          `participants: ${Participants}`
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-gray-500 mb-6", children: [
+          content,
+          " "
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
+    ] })
+  ] });
+};
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = reactExports.useState(false);
   const [isSticky, setIsSticky] = reactExports.useState(false);
@@ -9004,6 +9114,7 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
+    { link: "SinglePage", path: "/blogs/{1}" },
     { link: "Contact", path: "/contact" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "w-full bg-white md:bg-transparent fixed top-0 left-0 right-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -18309,24 +18420,6 @@ const NavbarLink = ({ active, as: Component = "a", disabled, children, className
   const theme2 = mergeDeep(useTheme().theme.navbar.link, customTheme);
   return jsxRuntimeExports.jsx("li", { children: jsxRuntimeExports.jsx(Component, { className: twMerge(theme2.base, active && theme2.active.on, !active && !disabled && theme2.active.off, theme2.disabled[disabled ? "on" : "off"], className), ...props, children }) });
 };
-function FaBars(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" } }] })(props);
-}
-function FaBook(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z" } }] })(props);
-}
-function FaEnvelope(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" } }] })(props);
-}
-function FaGreaterThan(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 384 512" }, "child": [{ "tag": "path", "attr": { "d": "M365.52 209.85L59.22 67.01c-16.06-7.49-35.15-.54-42.64 15.52L3.01 111.61c-7.49 16.06-.54 35.15 15.52 42.64L236.96 256.1 18.49 357.99C2.47 365.46-4.46 384.5 3.01 400.52l13.52 29C24 445.54 43.04 452.47 59.06 445l306.47-142.91a32.003 32.003 0 0 0 18.48-29v-34.23c-.01-12.45-7.21-23.76-18.49-29.01z" } }] })(props);
-}
-function FaPhone(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" } }] })(props);
-}
-function FaUser(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" } }] })(props);
-}
 const NavbarToggle = ({ barIcon: BarIcon = FaBars, className, theme: customTheme = {}, ...props }) => {
   const { isOpen, setIsOpen } = useNavbarContext();
   const theme2 = mergeDeep(useTheme().theme.navbar.toggle, customTheme);
@@ -18919,18 +19012,6 @@ function About() {
 }
 function ImEye(props) {
   return GenIcon({ "tag": "svg", "attr": { "version": "1.1", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M8 3c-3.489 0-6.514 2.032-8 5 1.486 2.968 4.511 5 8 5s6.514-2.032 8-5c-1.486-2.968-4.511-5-8-5zM11.945 5.652c0.94 0.6 1.737 1.403 2.335 2.348-0.598 0.946-1.395 1.749-2.335 2.348-1.181 0.753-2.545 1.152-3.944 1.152s-2.763-0.398-3.945-1.152c-0.94-0.6-1.737-1.403-2.335-2.348 0.598-0.946 1.395-1.749 2.335-2.348 0.061-0.039 0.123-0.077 0.185-0.114-0.156 0.427-0.241 0.888-0.241 1.369 0 2.209 1.791 4 4 4s4-1.791 4-4c0-0.481-0.085-0.942-0.241-1.369 0.062 0.037 0.124 0.075 0.185 0.114v0zM8 6.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5 0.672-1.5 1.5-1.5 1.5 0.672 1.5 1.5z" } }] })(props);
-}
-function BsFlagFill(props) {
-  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001" } }] })(props);
-}
-function BsInstagram(props) {
-  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" } }] })(props);
-}
-function BsPeopleFill(props) {
-  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" } }] })(props);
-}
-function BsTwitter(props) {
-  return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" } }] })(props);
 }
 function Services() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -19766,34 +19847,6 @@ BlogCards.propTypes = {
   pageSize: PropTypes.number.isRequired,
   selectedCategory: PropTypes.string
 };
-const Sidebar = () => {
-  const [popularBlog, setPopularBlog] = reactExports.useState([]);
-  reactExports.useEffect(() => {
-    fetch("https://eventpage-k3r6.onrender.com/EventPage").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
-  }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold px-4", children: "Latest Blogs" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(0, 5).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
-          "Read now ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
-        ] })
-      ] }, blog.id)) })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mt-20 px-4", children: "Popular Now" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(6, 10).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
-          "Read now ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
-        ] })
-      ] }, blog.id)) })
-    ] }) })
-  ] });
-};
 const Events = () => {
   const [blogs, setBlogs] = reactExports.useState([]);
   const [currentPage, setCurrentPage] = reactExports.useState(1);
@@ -19805,7 +19858,7 @@ const Events = () => {
     async function fetchBlogs() {
       setLoading(true);
       try {
-        let url = `https://eventpage-k3r6.onrender.com/EventPage?page=${currentPage}&limit=${pageSize}`;
+        let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
         if (selectedCategory) {
           url += `&category=${selectedCategory}`;
         }
@@ -19857,58 +19910,6 @@ const EventPage = () => {
       ] }) })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Events, {}) })
-  ] });
-};
-const SinglePage = () => {
-  const { id: id2 } = useParams();
-  const [data, setData] = reactExports.useState({});
-  const [loading, setLoading] = reactExports.useState(true);
-  reactExports.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`https://eventpage-k3r6.onrender.com/EventPage/${id2}`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
-        }
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [id2]);
-  const { title, author, content, image, Participants, published_date } = data;
-  if (loading) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Loading..." });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: "Single Event" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl  my-12 flex flex-col md:flex-row gap-12 m-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: image, alt: "", className: "mx-auto w-full rounded mb-5" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-4 text-blue-600 cursor-pointer", children: title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-3 text-gray-600", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(FaUser, { className: "inline-flex items-center mr-2" }),
-          "  ",
-          `Event Coordinator: ${author}`,
-          " | ",
-          published_date
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-6 text-gray-600", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(BsPeopleFill, { className: "inline-flex items-center mr-2" }),
-          `participants: ${Participants}`
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-gray-500 mb-6", children: [
-          content,
-          " "
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
-    ] })
   ] });
 };
 const notFoundImage = "" + new URL("404-94a12b6f.jpg", import.meta.url).href;

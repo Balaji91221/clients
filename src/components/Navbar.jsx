@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 import logo from "../assets/logo.png";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import SinglePage from "../pages/SinglePage";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
+    {link:"SinglePage", path :"/blogs/{1}"},
     { link: "Contact", path: "/contact" },
   ];
 
