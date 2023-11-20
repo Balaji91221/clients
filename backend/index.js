@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const blogs = require('./api/EventPage.json');
+const EventPage = require('./api/EventPage.json');
 const port = process.env.PORT || 5000;
 
 // Middleware
@@ -14,13 +14,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/EventPage', (req, res) => {
-  res.send(blogs);
+  res.send(EventPage);
 });
 
 app.get('/EventPage/:id', (req, res) => {
   const id = parseInt(req.params.id);
   console.log(`Received request for blog with id: ${id}`);
-  const blog = blogs.find(b => b.id === id);
+  const blog = EventPage.find(b => b.id === id);
 
   if (blog) {
     console.log('Sending blog data:', blog);

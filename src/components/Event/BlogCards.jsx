@@ -10,7 +10,7 @@ import event6 from '../../assets/Events/event-6.png';
 import event7 from '../../assets/Events/event-7.png';
 import event8 from '../../assets/Events/event-8.png';
 
-const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
+const BlogCards = ({ EventPage, currentPage, pageSize, selectedCategory }) => {
   const images = [
     {
       id: 1,
@@ -45,18 +45,18 @@ const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
     }
   ];
 
-  const filteredBlogs = blogs
+  const filteredEventPage = EventPage
     .filter((blog) => !selectedCategory || blog.category === selectedCategory)
     .slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
     <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ">
-      {filteredBlogs.map((blog) => {
+      {filteredEventPage.map((blog) => {
         // Find the corresponding image object based on blog ID
         const blogImage = images.find((img) => img.id === blog.id);
 
         return (
-          <a href={`blogs/${blog.id}`} key={blog.id} className="block p-5 shadow-lg rounded cursor-pointer">
+          <a href={`EventPage/${blog.id}`} key={blog.id} className="block p-5 shadow-lg rounded cursor-pointer">
             <div>
               {/* Access the image property from the found image object */}
               <img src={blogImage ? blogImage.image : ''} alt="" className="w-full" />
@@ -75,7 +75,7 @@ const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
 };
 
 BlogCards.propTypes = {
-  blogs: PropTypes.array.isRequired,
+  EventPage: PropTypes.array.isRequired,
   currentPage: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   selectedCategory: PropTypes.string,

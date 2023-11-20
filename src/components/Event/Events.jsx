@@ -8,7 +8,7 @@ import { FaUser } from 'react-icons/fa';
 import { BsPeopleFill } from 'react-icons/bs';
 
 const Events = () => {
-    const [blogs, setBlogs] = useState([]);
+    const [EventPage, setEventPage] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 12;
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -19,25 +19,25 @@ const Events = () => {
     const [loadingEvent, setLoadingEvent] = useState(true);
 
     useEffect(() => {
-        async function fetchBlogs() {
+        async function fetchEventPage() {
             setLoading(true);
 
             try {
-                let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
+                let url = `https://eventpage-z3n0.onrender.com/EventPage?page=${currentPage}&limit=${pageSize}`;
                 
                 const response = await fetch(url);
-                console.log("Blogs API URL:", url);
+                console.log("EventPage API URL:", url);
 
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch blogs. Status: ${response.status}`);
+                    throw new Error(`Failed to fetch EventPage. Status: ${response.status}`);
                 }
 
                 const data = await response.json();
-                console.log("Blogs API Response:", data);
+                console.log("EventPage API Response:", data);
 
-                setBlogs(data);
+                setEventPage(data);
             } catch (error) {
-                console.error("Error fetching blogs:", error);
+                console.error("Error fetching EventPage:", error);
             } finally {
                 setLoading(false);
             }
@@ -47,8 +47,8 @@ const Events = () => {
             setLoadingEvent(true);
 
             try {
-                const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id}`);
-                console.log("Event API URL:", `https://vtbif-express.onrender.com/blogs/${id}`);
+                const response = await fetch(`https://eventpage-z3n0.onrender.com/EventPage/${id}`);
+                console.log("Event API URL:", `https://eventpage-z3n0.onrender.com/EventPage/${id}`);
                 
                 if (!response.ok) {
                     throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
@@ -65,7 +65,7 @@ const Events = () => {
             }
         }
 
-        fetchBlogs();
+        fetchEventPage();
 
         if (id) {
             fetchEventData();
@@ -121,13 +121,13 @@ const Events = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row gap-12 ">
-                        <BlogCards blogs={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
+                        <BlogCards EventPage={EventPage} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
                         <div>
                             <Sidebar />
                         </div>
                     </div>
 
-                    <Pagination currentPage={currentPage} onPageChange={handlePageChange} blogs={blogs} pageSize={pageSize} />
+                    <Pagination currentPage={currentPage} onPageChange={handlePageChange} EventPage={EventPage} pageSize={pageSize} />
                 </>
             )}
         </div>

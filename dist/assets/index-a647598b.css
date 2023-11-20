@@ -3285,6 +3285,10 @@ input:checked + .toggle-bg {
   --tw-text-opacity: 1;
   color: rgb(255 90 31 / var(--tw-text-opacity));
 }
+.hover\:text-pink-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(231 70 148 / var(--tw-text-opacity));
+}
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));

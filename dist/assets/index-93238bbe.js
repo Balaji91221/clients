@@ -8999,14 +8999,14 @@ function FaUser(props) {
 const Sidebar = () => {
   const [popularBlog, setPopularBlog] = reactExports.useState([]);
   reactExports.useEffect(() => {
-    fetch("https://vtbif-express.onrender.com/blogs").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
+    fetch("https://eventpage-z3n0.onrender.com/EventPage").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
   }, []);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold px-4", children: "Latest Blogs" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold px-4", children: "Latest EventPage" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(0, 5).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/EventPage/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-pink-500", children: [
           "Read now ",
           /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
         ] })
@@ -9016,7 +9016,7 @@ const Sidebar = () => {
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mt-20 px-4", children: "Popular Now" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(6, 10).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/blogs/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/EventPage/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
           "Read now ",
           /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
         ] })
@@ -9036,6 +9036,202 @@ function BsPeopleFill(props) {
 function BsTwitter(props) {
   return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" } }] })(props);
 }
+var cssUnit = {
+  cm: true,
+  mm: true,
+  in: true,
+  px: true,
+  pt: true,
+  pc: true,
+  em: true,
+  ex: true,
+  ch: true,
+  rem: true,
+  vw: true,
+  vh: true,
+  vmin: true,
+  vmax: true,
+  "%": true
+};
+function parseLengthAndUnit(size) {
+  if (typeof size === "number") {
+    return {
+      value: size,
+      unit: "px"
+    };
+  }
+  var value;
+  var valueString = (size.match(/^[0-9.]*/) || "").toString();
+  if (valueString.includes(".")) {
+    value = parseFloat(valueString);
+  } else {
+    value = parseInt(valueString, 10);
+  }
+  var unit = (size.match(/[^0-9]*$/) || "").toString();
+  if (cssUnit[unit]) {
+    return {
+      value,
+      unit
+    };
+  }
+  console.warn("React Spinners: ".concat(size, " is not a valid css value. Defaulting to ").concat(value, "px."));
+  return {
+    value,
+    unit: "px"
+  };
+}
+function cssValue(value) {
+  var lengthWithunit = parseLengthAndUnit(value);
+  return "".concat(lengthWithunit.value).concat(lengthWithunit.unit);
+}
+var createAnimation = function(loaderName, frames, suffix) {
+  var animationName = "react-spinners-".concat(loaderName, "-").concat(suffix);
+  if (typeof window == "undefined" || !window.document) {
+    return animationName;
+  }
+  var styleEl = document.createElement("style");
+  document.head.appendChild(styleEl);
+  var styleSheet = styleEl.sheet;
+  var keyFrames = "\n    @keyframes ".concat(animationName, " {\n      ").concat(frames, "\n    }\n  ");
+  if (styleSheet) {
+    styleSheet.insertRule(keyFrames, 0);
+  }
+  return animationName;
+};
+var __assign = globalThis && globalThis.__assign || function() {
+  __assign = Object.assign || function(t2) {
+    for (var s2, i2 = 1, n2 = arguments.length; i2 < n2; i2++) {
+      s2 = arguments[i2];
+      for (var p2 in s2)
+        if (Object.prototype.hasOwnProperty.call(s2, p2))
+          t2[p2] = s2[p2];
+    }
+    return t2;
+  };
+  return __assign.apply(this, arguments);
+};
+var __rest = globalThis && globalThis.__rest || function(s2, e) {
+  var t2 = {};
+  for (var p2 in s2)
+    if (Object.prototype.hasOwnProperty.call(s2, p2) && e.indexOf(p2) < 0)
+      t2[p2] = s2[p2];
+  if (s2 != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i2 = 0, p2 = Object.getOwnPropertySymbols(s2); i2 < p2.length; i2++) {
+      if (e.indexOf(p2[i2]) < 0 && Object.prototype.propertyIsEnumerable.call(s2, p2[i2]))
+        t2[p2[i2]] = s2[p2[i2]];
+    }
+  return t2;
+};
+var fade = createAnimation("FadeLoader", "50% {opacity: 0.3} 100% {opacity: 1}", "fade");
+function FadeLoader(_a) {
+  var _b = _a.loading, loading = _b === void 0 ? true : _b, _c = _a.color, color = _c === void 0 ? "#000000" : _c, _d = _a.speedMultiplier, speedMultiplier = _d === void 0 ? 1 : _d, _e = _a.cssOverride, cssOverride = _e === void 0 ? {} : _e, _f = _a.height, height = _f === void 0 ? 15 : _f, _g = _a.width, width = _g === void 0 ? 5 : _g, _h = _a.radius, radius = _h === void 0 ? 2 : _h, _j = _a.margin, margin = _j === void 0 ? 2 : _j, additionalprops = __rest(_a, ["loading", "color", "speedMultiplier", "cssOverride", "height", "width", "radius", "margin"]);
+  var value = parseLengthAndUnit(margin).value;
+  var radiusValue = value + 18;
+  var quarter = radiusValue / 2 + radiusValue / 5.5;
+  var wrapper = __assign({ display: "inherit", position: "relative", fontSize: "0", top: radiusValue, left: radiusValue, width: "".concat(radiusValue * 3, "px"), height: "".concat(radiusValue * 3, "px") }, cssOverride);
+  var style = function(i2) {
+    return {
+      position: "absolute",
+      width: cssValue(width),
+      height: cssValue(height),
+      margin: cssValue(margin),
+      backgroundColor: color,
+      borderRadius: cssValue(radius),
+      transition: "2s",
+      animationFillMode: "both",
+      animation: "".concat(fade, " ").concat(1.2 / speedMultiplier, "s ").concat(i2 * 0.12, "s infinite ease-in-out")
+    };
+  };
+  var a2 = __assign(__assign({}, style(1)), { top: "".concat(radiusValue, "px"), left: "0" });
+  var b = __assign(__assign({}, style(2)), { top: "".concat(quarter, "px"), left: "".concat(quarter, "px"), transform: "rotate(-45deg)" });
+  var c2 = __assign(__assign({}, style(3)), { top: "0", left: "".concat(radiusValue, "px"), transform: "rotate(90deg)" });
+  var d = __assign(__assign({}, style(4)), { top: "".concat(-1 * quarter, "px"), left: "".concat(quarter, "px"), transform: "rotate(45deg)" });
+  var e = __assign(__assign({}, style(5)), { top: "".concat(-1 * radiusValue, "px"), left: "0" });
+  var f2 = __assign(__assign({}, style(6)), { top: "".concat(-1 * quarter, "px"), left: "".concat(-1 * quarter, "px"), transform: "rotate(-45deg)" });
+  var g = __assign(__assign({}, style(7)), { top: "0", left: "".concat(-1 * radiusValue, "px"), transform: "rotate(90deg)" });
+  var h = __assign(__assign({}, style(8)), { top: "".concat(quarter, "px"), left: "".concat(-1 * quarter, "px"), transform: "rotate(45deg)" });
+  if (!loading) {
+    return null;
+  }
+  return reactExports.createElement(
+    "span",
+    __assign({ style: wrapper }, additionalprops),
+    reactExports.createElement("span", { style: a2 }),
+    reactExports.createElement("span", { style: b }),
+    reactExports.createElement("span", { style: c2 }),
+    reactExports.createElement("span", { style: d }),
+    reactExports.createElement("span", { style: e }),
+    reactExports.createElement("span", { style: f2 }),
+    reactExports.createElement("span", { style: g }),
+    reactExports.createElement("span", { style: h })
+  );
+}
+const Loader = () => {
+  const [loadingText, setLoadingText] = reactExports.useState("Loading...");
+  reactExports.useEffect(() => {
+    const delay = setTimeout(() => {
+      setLoadingText("Almost there...");
+    }, 2e3);
+    return () => clearTimeout(delay);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center justify-center h-screen", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(FadeLoader, { color: "#db2777" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-500", children: loadingText })
+  ] });
+};
+const SinglePage = () => {
+  const { id: id2 } = useParams();
+  const [data, setData] = reactExports.useState({});
+  const [loading, setLoading] = reactExports.useState(true);
+  reactExports.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`https://eventpage-z3n0.onrender.com/EventPage/${id2}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [id2]);
+  const { title, author, content, image, Participants, published_date } = data;
+  if (loading) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Loader, {}) });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: "Single Event" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl my-12 flex flex-col md:flex-row gap-12 m-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: image, alt: "", className: "mx-auto w-full rounded mb-5" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-4 text-blue-600 cursor-pointer", children: title }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-3 text-gray-600", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FaUser, { className: "inline-flex items-center mr-2" }),
+          " ",
+          `Event Coordinator: ${author}`,
+          " | ",
+          published_date
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-6 text-gray-600", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(BsPeopleFill, { className: "inline-flex items-center mr-2" }),
+          `participants: ${Participants}`
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-gray-500 mb-6", children: [
+          content,
+          " "
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
+    ] })
+  ] });
+};
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = reactExports.useState(false);
   const [isSticky, setIsSticky] = reactExports.useState(false);
@@ -19489,149 +19685,6 @@ const Scroller = () => {
     }
   ) });
 };
-var cssUnit = {
-  cm: true,
-  mm: true,
-  in: true,
-  px: true,
-  pt: true,
-  pc: true,
-  em: true,
-  ex: true,
-  ch: true,
-  rem: true,
-  vw: true,
-  vh: true,
-  vmin: true,
-  vmax: true,
-  "%": true
-};
-function parseLengthAndUnit(size) {
-  if (typeof size === "number") {
-    return {
-      value: size,
-      unit: "px"
-    };
-  }
-  var value;
-  var valueString = (size.match(/^[0-9.]*/) || "").toString();
-  if (valueString.includes(".")) {
-    value = parseFloat(valueString);
-  } else {
-    value = parseInt(valueString, 10);
-  }
-  var unit = (size.match(/[^0-9]*$/) || "").toString();
-  if (cssUnit[unit]) {
-    return {
-      value,
-      unit
-    };
-  }
-  console.warn("React Spinners: ".concat(size, " is not a valid css value. Defaulting to ").concat(value, "px."));
-  return {
-    value,
-    unit: "px"
-  };
-}
-function cssValue(value) {
-  var lengthWithunit = parseLengthAndUnit(value);
-  return "".concat(lengthWithunit.value).concat(lengthWithunit.unit);
-}
-var createAnimation = function(loaderName, frames, suffix) {
-  var animationName = "react-spinners-".concat(loaderName, "-").concat(suffix);
-  if (typeof window == "undefined" || !window.document) {
-    return animationName;
-  }
-  var styleEl = document.createElement("style");
-  document.head.appendChild(styleEl);
-  var styleSheet = styleEl.sheet;
-  var keyFrames = "\n    @keyframes ".concat(animationName, " {\n      ").concat(frames, "\n    }\n  ");
-  if (styleSheet) {
-    styleSheet.insertRule(keyFrames, 0);
-  }
-  return animationName;
-};
-var __assign = globalThis && globalThis.__assign || function() {
-  __assign = Object.assign || function(t2) {
-    for (var s2, i2 = 1, n2 = arguments.length; i2 < n2; i2++) {
-      s2 = arguments[i2];
-      for (var p2 in s2)
-        if (Object.prototype.hasOwnProperty.call(s2, p2))
-          t2[p2] = s2[p2];
-    }
-    return t2;
-  };
-  return __assign.apply(this, arguments);
-};
-var __rest = globalThis && globalThis.__rest || function(s2, e) {
-  var t2 = {};
-  for (var p2 in s2)
-    if (Object.prototype.hasOwnProperty.call(s2, p2) && e.indexOf(p2) < 0)
-      t2[p2] = s2[p2];
-  if (s2 != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i2 = 0, p2 = Object.getOwnPropertySymbols(s2); i2 < p2.length; i2++) {
-      if (e.indexOf(p2[i2]) < 0 && Object.prototype.propertyIsEnumerable.call(s2, p2[i2]))
-        t2[p2[i2]] = s2[p2[i2]];
-    }
-  return t2;
-};
-var fade = createAnimation("FadeLoader", "50% {opacity: 0.3} 100% {opacity: 1}", "fade");
-function FadeLoader(_a) {
-  var _b = _a.loading, loading = _b === void 0 ? true : _b, _c = _a.color, color = _c === void 0 ? "#000000" : _c, _d = _a.speedMultiplier, speedMultiplier = _d === void 0 ? 1 : _d, _e = _a.cssOverride, cssOverride = _e === void 0 ? {} : _e, _f = _a.height, height = _f === void 0 ? 15 : _f, _g = _a.width, width = _g === void 0 ? 5 : _g, _h = _a.radius, radius = _h === void 0 ? 2 : _h, _j = _a.margin, margin = _j === void 0 ? 2 : _j, additionalprops = __rest(_a, ["loading", "color", "speedMultiplier", "cssOverride", "height", "width", "radius", "margin"]);
-  var value = parseLengthAndUnit(margin).value;
-  var radiusValue = value + 18;
-  var quarter = radiusValue / 2 + radiusValue / 5.5;
-  var wrapper = __assign({ display: "inherit", position: "relative", fontSize: "0", top: radiusValue, left: radiusValue, width: "".concat(radiusValue * 3, "px"), height: "".concat(radiusValue * 3, "px") }, cssOverride);
-  var style = function(i2) {
-    return {
-      position: "absolute",
-      width: cssValue(width),
-      height: cssValue(height),
-      margin: cssValue(margin),
-      backgroundColor: color,
-      borderRadius: cssValue(radius),
-      transition: "2s",
-      animationFillMode: "both",
-      animation: "".concat(fade, " ").concat(1.2 / speedMultiplier, "s ").concat(i2 * 0.12, "s infinite ease-in-out")
-    };
-  };
-  var a2 = __assign(__assign({}, style(1)), { top: "".concat(radiusValue, "px"), left: "0" });
-  var b = __assign(__assign({}, style(2)), { top: "".concat(quarter, "px"), left: "".concat(quarter, "px"), transform: "rotate(-45deg)" });
-  var c2 = __assign(__assign({}, style(3)), { top: "0", left: "".concat(radiusValue, "px"), transform: "rotate(90deg)" });
-  var d = __assign(__assign({}, style(4)), { top: "".concat(-1 * quarter, "px"), left: "".concat(quarter, "px"), transform: "rotate(45deg)" });
-  var e = __assign(__assign({}, style(5)), { top: "".concat(-1 * radiusValue, "px"), left: "0" });
-  var f2 = __assign(__assign({}, style(6)), { top: "".concat(-1 * quarter, "px"), left: "".concat(-1 * quarter, "px"), transform: "rotate(-45deg)" });
-  var g = __assign(__assign({}, style(7)), { top: "0", left: "".concat(-1 * radiusValue, "px"), transform: "rotate(90deg)" });
-  var h = __assign(__assign({}, style(8)), { top: "".concat(quarter, "px"), left: "".concat(-1 * quarter, "px"), transform: "rotate(45deg)" });
-  if (!loading) {
-    return null;
-  }
-  return reactExports.createElement(
-    "span",
-    __assign({ style: wrapper }, additionalprops),
-    reactExports.createElement("span", { style: a2 }),
-    reactExports.createElement("span", { style: b }),
-    reactExports.createElement("span", { style: c2 }),
-    reactExports.createElement("span", { style: d }),
-    reactExports.createElement("span", { style: e }),
-    reactExports.createElement("span", { style: f2 }),
-    reactExports.createElement("span", { style: g }),
-    reactExports.createElement("span", { style: h })
-  );
-}
-const Loader = () => {
-  const [loadingText, setLoadingText] = reactExports.useState("Loading...");
-  reactExports.useEffect(() => {
-    const delay = setTimeout(() => {
-      setLoadingText("Almost there...");
-    }, 2e3);
-    return () => clearTimeout(delay);
-  }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center justify-center h-screen", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(FadeLoader, { color: "#db2777" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-500", children: loadingText })
-  ] });
-};
 var propTypes = { exports: {} };
 var ReactPropTypesSecret$1 = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
 var ReactPropTypesSecret_1 = ReactPropTypesSecret$1;
@@ -19687,8 +19740,8 @@ var factoryWithThrowingShims = function() {
 }
 var propTypesExports = propTypes.exports;
 const PropTypes = /* @__PURE__ */ getDefaultExportFromCjs(propTypesExports);
-const Pagination = ({ currentPage, onPageChange, blogs, pageSize }) => {
-  const totalPages = Math.ceil(blogs.length / pageSize);
+const Pagination = ({ currentPage, onPageChange, EventPage: EventPage2, pageSize }) => {
+  const totalPages = Math.ceil(EventPage2.length / pageSize);
   const renderPaginationLinks = () => {
     return Array.from({ length: totalPages }, (_, i2) => i2 + 1).map((pageNumber) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: pageNumber === currentPage ? "activePagination" : "hover:bg-blue-200", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "a",
@@ -19725,7 +19778,7 @@ const Pagination = ({ currentPage, onPageChange, blogs, pageSize }) => {
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
-  blogs: PropTypes.array.isRequired,
+  EventPage: PropTypes.array.isRequired,
   pageSize: PropTypes.number.isRequired
 };
 const event = "" + new URL("event-1-ac71fa72.png", import.meta.url).href;
@@ -19736,7 +19789,7 @@ const event5 = "" + new URL("event-5_1-5444458f.png", import.meta.url).href;
 const event6 = "" + new URL("event-6-43d5d3e1.png", import.meta.url).href;
 const event7 = "" + new URL("event-7-f52b93d7.png", import.meta.url).href;
 const event8 = "" + new URL("event-8-1fca9d8c.png", import.meta.url).href;
-const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
+const BlogCards = ({ EventPage: EventPage2, currentPage, pageSize, selectedCategory }) => {
   const images = [
     {
       id: 1,
@@ -19771,10 +19824,10 @@ const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
       image: event8
     }
   ];
-  const filteredBlogs = blogs.filter((blog) => !selectedCategory || blog.category === selectedCategory).slice((currentPage - 1) * pageSize, currentPage * pageSize);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ", children: filteredBlogs.map((blog) => {
+  const filteredEventPage = EventPage2.filter((blog) => !selectedCategory || blog.category === selectedCategory).slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ", children: filteredEventPage.map((blog) => {
     const blogImage = images.find((img) => img.id === blog.id);
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: `blogs/${blog.id}`, className: "block p-5 shadow-lg rounded cursor-pointer", children: [
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: `EventPage/${blog.id}`, className: "block p-5 shadow-lg rounded cursor-pointer", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: blogImage ? blogImage.image : "", alt: "", className: "w-full" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 mb-2 font-bold hover:text-blue-600 cursor-pointer", children: blog.title }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-2", children: [
@@ -19789,13 +19842,13 @@ const BlogCards = ({ blogs, currentPage, pageSize, selectedCategory }) => {
   }) });
 };
 BlogCards.propTypes = {
-  blogs: PropTypes.array.isRequired,
+  EventPage: PropTypes.array.isRequired,
   currentPage: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
   selectedCategory: PropTypes.string
 };
 const Events = () => {
-  const [blogs, setBlogs] = reactExports.useState([]);
+  const [EventPage2, setEventPage] = reactExports.useState([]);
   const [currentPage, setCurrentPage] = reactExports.useState(1);
   const pageSize = 12;
   const [selectedCategory, setSelectedCategory] = reactExports.useState(null);
@@ -19805,20 +19858,20 @@ const Events = () => {
   const [data, setData] = reactExports.useState({});
   const [loadingEvent, setLoadingEvent] = reactExports.useState(true);
   reactExports.useEffect(() => {
-    async function fetchBlogs() {
+    async function fetchEventPage() {
       setLoading(true);
       try {
-        let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
+        let url = `https://eventpage-z3n0.onrender.com/EventPage?page=${currentPage}&limit=${pageSize}`;
         const response = await fetch(url);
-        console.log("Blogs API URL:", url);
+        console.log("EventPage API URL:", url);
         if (!response.ok) {
-          throw new Error(`Failed to fetch blogs. Status: ${response.status}`);
+          throw new Error(`Failed to fetch EventPage. Status: ${response.status}`);
         }
         const data2 = await response.json();
-        console.log("Blogs API Response:", data2);
-        setBlogs(data2);
+        console.log("EventPage API Response:", data2);
+        setEventPage(data2);
       } catch (error) {
-        console.error("Error fetching blogs:", error);
+        console.error("Error fetching EventPage:", error);
       } finally {
         setLoading(false);
       }
@@ -19826,8 +19879,8 @@ const Events = () => {
     async function fetchEventData() {
       setLoadingEvent(true);
       try {
-        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
-        console.log("Event API URL:", `https://vtbif-express.onrender.com/blogs/${id2}`);
+        const response = await fetch(`https://eventpage-z3n0.onrender.com/EventPage/${id2}`);
+        console.log("Event API URL:", `https://eventpage-z3n0.onrender.com/EventPage/${id2}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
         }
@@ -19840,7 +19893,7 @@ const Events = () => {
         setLoadingEvent(false);
       }
     }
-    fetchBlogs();
+    fetchEventPage();
     if (id2) {
       fetchEventData();
     }
@@ -19880,10 +19933,10 @@ const Events = () => {
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg font-semibold", children: "Our Events" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col lg:flex-row gap-12 ", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(BlogCards, { blogs, currentPage, selectedCategory, pageSize }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(BlogCards, { EventPage: EventPage2, currentPage, selectedCategory, pageSize }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Pagination, { currentPage, onPageChange: handlePageChange, blogs, pageSize })
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Pagination, { currentPage, onPageChange: handlePageChange, EventPage: EventPage2, pageSize })
   ] }) });
 };
 const EventPage = () => {
@@ -19938,6 +19991,7 @@ function App() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/startup", element: /* @__PURE__ */ jsxRuntimeExports.jsx(StartupPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/EventPage", element: /* @__PURE__ */ jsxRuntimeExports.jsx(EventPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "EventPage/:id", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SinglePage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Scroller, {}),

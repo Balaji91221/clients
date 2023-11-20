@@ -11,7 +11,7 @@ import Startup from './pages/StartupPage';
 import Scroller from "./components/Scroller";
 import Loader from './components/Loader';
 import EventPage from './pages/EventPage';
-
+import SinglePage from './pages/SinglePage';
 import NotFound from './components/NotFound';
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
         <Route path="/startup" element={<Startup />} />
         <Route path="/EventPage" element={<EventPage />} />
         <Route path="/contact" element={<Contact />} />
-      
+        <Route path="EventPage/:id" element={<SinglePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Scroller />

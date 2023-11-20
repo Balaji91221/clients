@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Pagination = ({ currentPage, onPageChange, blogs, pageSize }) => {
-  const totalPages = Math.ceil(blogs.length / pageSize);
+const Pagination = ({ currentPage, onPageChange, EventPage, pageSize }) => {
+  const totalPages = Math.ceil(EventPage.length / pageSize);
 
   const renderPaginationLinks = () => {
     return Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
@@ -50,7 +50,7 @@ const Pagination = ({ currentPage, onPageChange, blogs, pageSize }) => {
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
-  blogs: PropTypes.array.isRequired,
+  EventPage: PropTypes.array.isRequired,
   pageSize: PropTypes.number.isRequired,
 };
 
