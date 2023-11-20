@@ -17,7 +17,7 @@ const Events = () => {
             setLoading(true); // Set loading to true when starting to fetch data
 
             try {
-                let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
+                let url = `https://eventpage-k3r6.onrender.com/EventPage?page=${currentPage}&limit=${pageSize}`;
 
                 if (selectedCategory) {
                     url += `&category=${selectedCategory}`;

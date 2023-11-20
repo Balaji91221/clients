@@ -19769,7 +19769,7 @@ BlogCards.propTypes = {
 const Sidebar = () => {
   const [popularBlog, setPopularBlog] = reactExports.useState([]);
   reactExports.useEffect(() => {
-    fetch("https://vtbif-express.onrender.com/blogs").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
+    fetch("https://eventpage-k3r6.onrender.com/EventPage").then((res) => res.json()).then((data) => setPopularBlog(data.slice(0, 15)));
   }, []);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -19805,7 +19805,7 @@ const Events = () => {
     async function fetchBlogs() {
       setLoading(true);
       try {
-        let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
+        let url = `https://eventpage-k3r6.onrender.com/EventPage?page=${currentPage}&limit=${pageSize}`;
         if (selectedCategory) {
           url += `&category=${selectedCategory}`;
         }
@@ -19866,7 +19866,7 @@ const SinglePage = () => {
   reactExports.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
+        const response = await fetch(`https://eventpage-k3r6.onrender.com/EventPage/${id2}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
         }

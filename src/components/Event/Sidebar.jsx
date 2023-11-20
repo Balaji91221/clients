@@ -6,7 +6,7 @@ const Sidebar = () => {
   const [popularBlog, setPopularBlog] = useState([]);
 
   useEffect(() => {
-    fetch('https://vtbif-express.onrender.com/blogs')
+    fetch('https://eventpage-k3r6.onrender.com/EventPage')
       .then((res) => res.json())
       .then((data) => setPopularBlog(data.slice(0, 15)));
   }, []);
