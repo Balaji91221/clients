@@ -9181,6 +9181,7 @@ const Loader = () => {
 };
 const SinglePage = () => {
   const { id: id2 } = useParams();
+  const navigate = useNavigate();
   const [data, setData] = reactExports.useState({});
   const [loading, setLoading] = reactExports.useState(true);
   reactExports.useEffect(() => {
@@ -9202,6 +9203,9 @@ const SinglePage = () => {
     fetchData();
   }, [id2]);
   const { title, author, content, image, Participants, published_date } = data;
+  const handleBackButtonClick = () => {
+    navigate(-1);
+  };
   if (loading) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Loader, {}) });
   }
@@ -9229,7 +9233,8 @@ const SinglePage = () => {
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
-    ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: handleBackButtonClick, className: "bg-blue-500 m-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded", children: "Back" })
   ] });
 };
 function Navbar() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Change this line
 import { FaUser } from 'react-icons/fa';
 import Sidebar from '../components/Event/Sidebar';
 import { BsPeopleFill } from 'react-icons/bs';
@@ -7,6 +7,7 @@ import Loader from '../components/Loader';
 
 const SinglePage = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Change this line
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -34,10 +35,14 @@ const SinglePage = () => {
 
   const { title, author, content, image, Participants, published_date } = data;
 
+  const handleBackButtonClick = () => {
+    navigate(-1); // Go back to the previous page
+  };
+
   if (loading) {
     return (
       <div className='text-center'>
-       <Loader/>
+        <Loader />
       </div>
     );
   }
@@ -68,6 +73,10 @@ const SinglePage = () => {
           <Sidebar />
         </div>
       </div>
+
+      <button onClick={handleBackButtonClick} className='bg-blue-500 m-10 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+        Back
+      </button>
     </div>
   );
 };
