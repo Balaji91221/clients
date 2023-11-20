@@ -1,10 +1,8 @@
-// Events.jsx
-
 import React, { useState, useEffect } from "react";
 import Pagination from "./Pagination.jsx";
 import BlogCards from "./BlogCards.jsx";
 import Sidebar from "./Sidebar.jsx";
-import Loader from "../Loader.jsx"; // Import your loader component
+import Loader from "../Loader.jsx";
 import { useParams } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import { BsPeopleFill } from 'react-icons/bs';
@@ -15,25 +13,33 @@ const Events = () => {
     const pageSize = 12;
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [activeCategory, setActiveCategory] = useState(null);
-    const [loading, setLoading] = useState(true); // New state for loading
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
     const [data, setData] = useState({});
     const [loadingEvent, setLoadingEvent] = useState(true);
 
     useEffect(() => {
         async function fetchBlogs() {
-            setLoading(true); // Set loading to true when starting to fetch data
+            setLoading(true);
 
             try {
                 let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
-
+                
                 const response = await fetch(url);
+                console.log("Blogs API URL:", url);
+
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch blogs. Status: ${response.status}`);
+                }
+
                 const data = await response.json();
+                console.log("Blogs API Response:", data);
+
                 setBlogs(data);
             } catch (error) {
                 console.error("Error fetching blogs:", error);
             } finally {
-                setLoading(false); // Set loading to false when data is fetched (or if there's an error)
+                setLoading(false);
             }
         }
 
@@ -42,10 +48,15 @@ const Events = () => {
 
             try {
                 const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id}`);
+                console.log("Event API URL:", `https://vtbif-express.onrender.com/blogs/${id}`);
+                
                 if (!response.ok) {
                     throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
                 }
+
                 const result = await response.json();
+                console.log("Event API Response:", result);
+
                 setData(result);
             } catch (error) {
                 console.error('Error fetching event data:', error);
@@ -55,6 +66,7 @@ const Events = () => {
         }
 
         fetchBlogs();
+
         if (id) {
             fetchEventData();
         }
@@ -73,10 +85,10 @@ const Events = () => {
     return (
         <div className="m-11">
             {loading ? (
-                <Loader /> // Render your loader while data is being fetched
+                <Loader />
             ) : (
                 <>
-                    {id && !loadingEvent && (
+                    {id && !loadingEvent && Object.keys(data).length > 0 && (
                         <div>
                             <div className='py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 '>
                                 <h1 className='text-5xl leading-snug font-bold mb-5'>{data.title}</h1>
@@ -93,7 +105,7 @@ const Events = () => {
                                     </p>
                                     <p className='text-sm text-gray-500 mb-6'>{data.content} </p>
                                     <div className='text-base text-gray-500'>
-                                        {/* Your content goes here */}
+                                       
                                     </div>
                                 </div>
                                 <div className='lg:w-1/2'>

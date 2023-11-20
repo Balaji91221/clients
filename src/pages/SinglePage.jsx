@@ -12,16 +12,19 @@ const SinglePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true); // Set loading to true when starting to fetch data
+
         const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
         }
+
         const result = await response.json();
         setData(result);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
-        setLoading(false);
+        setLoading(false); // Set loading to false when data is fetched or if there's an error
       }
     };
 

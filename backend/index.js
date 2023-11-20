@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Routes
 app.get('/', (req, res) => {
-  res.send("Blog server is running!");
+  res.send("Event server is running!");
 });
 
 app.get('/EventPage', (req, res) => {

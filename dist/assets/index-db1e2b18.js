@@ -9036,58 +9036,6 @@ function BsPeopleFill(props) {
 function BsTwitter(props) {
   return GenIcon({ "tag": "svg", "attr": { "fill": "currentColor", "viewBox": "0 0 16 16" }, "child": [{ "tag": "path", "attr": { "d": "M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" } }] })(props);
 }
-const SinglePage = () => {
-  const { id: id2 } = useParams();
-  const [data, setData] = reactExports.useState({});
-  const [loading, setLoading] = reactExports.useState(true);
-  reactExports.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
-        }
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [id2]);
-  const { title, author, content, image, Participants, published_date } = data;
-  if (loading) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Loading..." });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: "Single Event" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl  my-12 flex flex-col md:flex-row gap-12 m-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: image, alt: "", className: "mx-auto w-full rounded mb-5" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-4 text-blue-600 cursor-pointer", children: title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-3 text-gray-600", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(FaUser, { className: "inline-flex items-center mr-2" }),
-          "  ",
-          `Event Coordinator: ${author}`,
-          " | ",
-          published_date
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-6 text-gray-600", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(BsPeopleFill, { className: "inline-flex items-center mr-2" }),
-          `participants: ${Participants}`
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-gray-500 mb-6", children: [
-          content,
-          " "
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
-    ] })
-  ] });
-};
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = reactExports.useState(false);
   const [isSticky, setIsSticky] = reactExports.useState(false);
@@ -9114,7 +9062,6 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
-    { link: "SinglePage", path: "/blogs/{:id}" },
     { link: "Contact", path: "/contact" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "w-full bg-white md:bg-transparent fixed top-0 left-0 right-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -19863,7 +19810,12 @@ const Events = () => {
       try {
         let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
         const response = await fetch(url);
+        console.log("Blogs API URL:", url);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blogs. Status: ${response.status}`);
+        }
         const data2 = await response.json();
+        console.log("Blogs API Response:", data2);
         setBlogs(data2);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -19875,10 +19827,12 @@ const Events = () => {
       setLoadingEvent(true);
       try {
         const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
+        console.log("Event API URL:", `https://vtbif-express.onrender.com/blogs/${id2}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
         }
         const result = await response.json();
+        console.log("Event API Response:", result);
         setData(result);
       } catch (error) {
         console.error("Error fetching event data:", error);
@@ -19895,7 +19849,7 @@ const Events = () => {
     setCurrentPage(pageNumber);
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "m-11", children: loading ? /* @__PURE__ */ jsxRuntimeExports.jsx(Loader, {}) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    id2 && !loadingEvent && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+    id2 && !loadingEvent && Object.keys(data).length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: data.title }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl  my-12 flex flex-col md:flex-row gap-12 m-10", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
@@ -19984,7 +19938,6 @@ function App() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/startup", element: /* @__PURE__ */ jsxRuntimeExports.jsx(StartupPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/EventPage", element: /* @__PURE__ */ jsxRuntimeExports.jsx(EventPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "blogs/:id", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SinglePage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(NotFound, {}) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Scroller, {}),
