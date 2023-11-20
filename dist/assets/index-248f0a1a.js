@@ -9114,7 +9114,7 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
-    { link: "SinglePage", path: "/blogs/{1}" },
+    { link: "SinglePage", path: "/blogs/{:id}" },
     { link: "Contact", path: "/contact" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "w-full bg-white md:bg-transparent fixed top-0 left-0 right-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -19854,29 +19854,73 @@ const Events = () => {
   const [selectedCategory, setSelectedCategory] = reactExports.useState(null);
   reactExports.useState(null);
   const [loading, setLoading] = reactExports.useState(true);
+  const { id: id2 } = useParams();
+  const [data, setData] = reactExports.useState({});
+  const [loadingEvent, setLoadingEvent] = reactExports.useState(true);
   reactExports.useEffect(() => {
     async function fetchBlogs() {
       setLoading(true);
       try {
         let url = `https://vtbif-express.onrender.com/blogs?page=${currentPage}&limit=${pageSize}`;
-        if (selectedCategory) {
-          url += `&category=${selectedCategory}`;
-        }
         const response = await fetch(url);
-        const data = await response.json();
-        setBlogs(data);
+        const data2 = await response.json();
+        setBlogs(data2);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
         setLoading(false);
       }
     }
+    async function fetchEventData() {
+      setLoadingEvent(true);
+      try {
+        const response = await fetch(`https://vtbif-express.onrender.com/blogs/${id2}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch blog post. Status: ${response.status}`);
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching event data:", error);
+      } finally {
+        setLoadingEvent(false);
+      }
+    }
     fetchBlogs();
-  }, [currentPage, pageSize, selectedCategory]);
+    if (id2) {
+      fetchEventData();
+    }
+  }, [currentPage, pageSize, selectedCategory, id2]);
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "m-11", children: loading ? /* @__PURE__ */ jsxRuntimeExports.jsx(Loader, {}) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    id2 && !loadingEvent && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-36 bg-gray-200 py-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-center px-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-5xl leading-snug font-bold mb-5", children: data.title }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl  my-12 flex flex-col md:flex-row gap-12 m-10", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:w-3/4 mx-auto", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: data.image, alt: "", className: "mx-auto w-full rounded mb-5" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold mb-4 text-blue-600 cursor-pointer", children: data.title }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-3 text-gray-600", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(FaUser, { className: "inline-flex items-center mr-2" }),
+            "  ",
+            `Event Coordinator: ${data.author}`,
+            " | ",
+            data.published_date
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-6 text-gray-600", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(BsPeopleFill, { className: "inline-flex items-center mr-2" }),
+            `participants: ${data.Participants}`
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm text-gray-500 mb-6", children: [
+            data.content,
+            " "
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-base text-gray-500" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:w-1/2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, {}) })
+      ] })
+    ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-8 m-24", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold mb-2", children: "− What We do −" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg font-semibold", children: "Our Events" })

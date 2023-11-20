@@ -33,7 +33,7 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
-    {link:"SinglePage", path :"/blogs/{1}"},
+    {link:"SinglePage", path :"/blogs/{:id}"},
     { link: "Contact", path: "/contact" },
   ];
 
