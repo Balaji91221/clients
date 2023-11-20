@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import event from '../../assets/Events/event-1.png';
@@ -12,37 +13,14 @@ import event8 from '../../assets/Events/event-8.png';
 
 const BlogCards = ({ EventPage, currentPage, pageSize, selectedCategory }) => {
   const images = [
-    {
-      id: 1,
-      image: event
-    },
-    {
-      id: 2,
-      image: event2
-    },
-    {
-      id: 3,
-      image: event3
-    },
-    {
-      id: 4,
-      image:  event4
-    },
-    {
-      id: 5,
-      image: event5
-    },{
-      id: 6,
-      image: event6
-    },
-    {
-      id: 7,
-      image: event7
-    },
-    {
-      id: 8,
-      image: event8
-    }
+    { id: 1, image: event },
+    { id: 2, image: event2 },
+    { id: 3, image: event3 },
+    { id: 4, image: event4 },
+    { id: 5, image: event5 },
+    { id: 6, image: event6 },
+    { id: 7, image: event7 },
+    { id: 8, image: event8 },
   ];
 
   const filteredEventPage = EventPage
@@ -50,15 +28,13 @@ const BlogCards = ({ EventPage, currentPage, pageSize, selectedCategory }) => {
     .slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
-    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ">
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
       {filteredEventPage.map((blog) => {
-        // Find the corresponding image object based on blog ID
         const blogImage = images.find((img) => img.id === blog.id);
 
         return (
-          <a href={`EventPage/${blog.id}`} key={blog.id} className="block p-5 shadow-lg rounded cursor-pointer">
+          <Link to={`/EventPage/${blog.id}`} key={blog.id} className="block p-5 shadow-lg rounded cursor-pointer">
             <div>
-              {/* Access the image property from the found image object */}
               <img src={blogImage ? blogImage.image : ''} alt="" className="w-full" />
             </div>
             <h3 className="mt-4 mb-2 font-bold hover:text-blue-600 cursor-pointer">{blog.title}</h3>
@@ -67,7 +43,7 @@ const BlogCards = ({ EventPage, currentPage, pageSize, selectedCategory }) => {
               {blog.author}
             </p>
             <p className="text-sm text-gray-500">Published: {blog.published_date}</p>
-          </a>
+          </Link>
         );
       })}
     </div>

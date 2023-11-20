@@ -19791,43 +19791,19 @@ const event7 = "" + new URL("event-7-f52b93d7.png", import.meta.url).href;
 const event8 = "" + new URL("event-8-1fca9d8c.png", import.meta.url).href;
 const BlogCards = ({ EventPage: EventPage2, currentPage, pageSize, selectedCategory }) => {
   const images = [
-    {
-      id: 1,
-      image: event
-    },
-    {
-      id: 2,
-      image: event2
-    },
-    {
-      id: 3,
-      image: event3
-    },
-    {
-      id: 4,
-      image: event4
-    },
-    {
-      id: 5,
-      image: event5
-    },
-    {
-      id: 6,
-      image: event6
-    },
-    {
-      id: 7,
-      image: event7
-    },
-    {
-      id: 8,
-      image: event8
-    }
+    { id: 1, image: event },
+    { id: 2, image: event2 },
+    { id: 3, image: event3 },
+    { id: 4, image: event4 },
+    { id: 5, image: event5 },
+    { id: 6, image: event6 },
+    { id: 7, image: event7 },
+    { id: 8, image: event8 }
   ];
   const filteredEventPage = EventPage2.filter((blog) => !selectedCategory || blog.category === selectedCategory).slice((currentPage - 1) * pageSize, currentPage * pageSize);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 ", children: filteredEventPage.map((blog) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8", children: filteredEventPage.map((blog) => {
     const blogImage = images.find((img) => img.id === blog.id);
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: `EventPage/${blog.id}`, className: "block p-5 shadow-lg rounded cursor-pointer", children: [
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/EventPage/${blog.id}`, className: "block p-5 shadow-lg rounded cursor-pointer", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: blogImage ? blogImage.image : "", alt: "", className: "w-full" }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 mb-2 font-bold hover:text-blue-600 cursor-pointer", children: blog.title }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mb-2", children: [
