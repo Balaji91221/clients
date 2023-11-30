@@ -19,4 +19,4 @@ Developed a dynamic website using [Vite](https://vitejs.dev/), [React](https://r
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/your-username/vt-bif-website.git
+   git clone https://github.com/Balaji91221/clients.git
