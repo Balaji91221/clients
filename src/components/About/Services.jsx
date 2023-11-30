@@ -9,7 +9,7 @@ function Services() {
   return (
     <div>
       {/*  */}
-      <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white">
+      <div className=" px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white">
         <div className="text-center mb-8">
           <p className="text-pink-500 text-lg font-semibold mb-2">
             − About Us −
