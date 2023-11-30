@@ -19163,7 +19163,7 @@ function ImEye(props) {
 }
 function Services() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: " px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-8", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold mb-2", children: "− About Us −" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg font-semibold ", children: "Why You Should Join VTBIF Incubation Center Innovate & Ignite" })
@@ -19235,7 +19235,7 @@ function Bottombar() {
                 "img",
                 {
                   src: logo,
-                  className: "h-14  inline-block items-center",
+                  className: "h-14 inline-block items-center",
                   alt: ""
                 }
               ),
@@ -19245,7 +19245,7 @@ function Bottombar() {
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-1", children: " copyright 2023  vtbif" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: " All right reserved" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: " All rights reserved" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6", children: [
@@ -19277,7 +19277,7 @@ function Bottombar() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         Footer.Copyright,
         {
-          by: "K Balaji Naik",
+          by: "Vtbif",
           href: "#",
           year: 2023
         }
@@ -19298,7 +19298,8 @@ function Bottombar() {
           }
         )
       ] })
-    ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-4", children: "Website developed ❤️ by K Balaji Naik" })
   ] }) });
 }
 function Team() {
@@ -19333,7 +19334,7 @@ function Team() {
 }
 const ameetImg = "" + new URL("ameet-25685460.jpeg", import.meta.url).href;
 const sudha = "" + new URL("sudha-021f3711.jpeg", import.meta.url).href;
-const ravi = "" + new URL("ravi-9aac3182.jpg", import.meta.url).href;
+const ravi$1 = "" + new URL("ravi-9aac3182.jpg", import.meta.url).href;
 const Sb = "" + new URL("sb-ee3bd10b.jpeg", import.meta.url).href;
 const sam = "" + new URL("sam-5d56c7f7.jpg", import.meta.url).href;
 const sira = "" + new URL("sira-a1e729a4.jpg", import.meta.url).href;
@@ -19346,7 +19347,7 @@ const avin = "" + new URL("avin-7d29f008.png", import.meta.url).href;
 const deep = "" + new URL("deep-f1aad7ae.png", import.meta.url).href;
 const kupp = "" + new URL("kupp-76709b2c.png", import.meta.url).href;
 const renu = "" + new URL("renu-a31e074c.png", import.meta.url).href;
-const leadersData = [
+const leadersData$1 = [
   {
     name: "Dr. Ameet Chavan",
     image: ameetImg,
@@ -19359,7 +19360,7 @@ const leadersData = [
   },
   {
     name: "Dr. M Ravindra",
-    image: ravi,
+    image: ravi$1,
     role: ""
   },
   {
@@ -19431,7 +19432,7 @@ function tesm() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl", children: "Meet Our Dynamic Incubation Center Team" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg leading-8 text-gray-600", children: "Discover the faces behind VT-BIF, a team dedicated to innovation and startup success. From visionary leaders to skilled advisors and R&D enthusiasts, we collaborate to shape the future of technology. Join us on this exciting journey!" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { role: "list", className: "grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-2", children: leadersData.map((leader, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-y-4", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { role: "list", className: "grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-2", children: leadersData$1.map((leader, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-y-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "h-36 w-32 rounded", src: leader.image, alt: "" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 tracking-tight text-gray-900", children: leader.name }),
@@ -19440,10 +19441,68 @@ function tesm() {
     ] }) }, index2)) })
   ] }) });
 }
+const mukesh = "" + new URL("mukesh-c6793338.jpg", import.meta.url).href;
+const anil = "" + new URL("anil-7f1b28e5.jpg", import.meta.url).href;
+const sridhar = "" + new URL("sridhar-351a1a1f.jpg", import.meta.url).href;
+const balachandran = "" + new URL("balachandran-9c1e8bca.jpg", import.meta.url).href;
+const ravi = "" + new URL("Ravi-4c7bfab8.jpg", import.meta.url).href;
+const bhanu = "" + new URL("bhanu-141e1e9f.jpg", import.meta.url).href;
+const leadersData = [
+  {
+    name: "Dr. Mukesh Tripathi",
+    image: mukesh,
+    role: "Director & CEO, AIIMS ",
+    subrole: "Mangalari, Ap"
+  },
+  {
+    name: "Mr.Anil Kumar Tentu",
+    image: anil,
+    role: "CEO, AP Innovation Society(APIS)",
+    subrole: "Govt. of the Andhra Pradesh"
+  },
+  {
+    name: "Mr.Sridhar Kosaraju",
+    image: sridhar,
+    role: "Founder & CEO@Nimaisoft | chairman @DeepTech & Naipunya | Former State President@ItAAP | AI",
+    subrole: "Evangelist | Angel Investor | Mentor"
+  },
+  {
+    name: "Dr.Balachandran A",
+    image: balachandran,
+    role: "Manging Director",
+    subrole: "VIT TBI Incubation Center"
+  },
+  {
+    name: "Mr.Ravi Eswarapu",
+    image: ravi,
+    role: "TIEAP President",
+    subrole: "CEO aHUB (Andhra University)"
+  },
+  {
+    name: "Mr.Bhnau Prakash Varla",
+    image: bhanu,
+    role: "Angel Investor, Partner & Director -",
+    subrole: "Plural technology Pvt. Ltd"
+  }
+];
+const AdvisoryCommitteeDetails = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full h-100 mx-auto p-6 bg-white-100 shadow-lg rounded-md  ", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center m-8 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold", children: "− VTBIF Proposed Advisory Committee −" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { role: "list", className: "grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2", children: leadersData.map((leader, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-y-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "h-40 w-40 rounded", src: leader.image, alt: "" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 tracking-tight text-gray-900", children: leader.name }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-indigo-600", children: leader.role }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-indigo-600", children: leader.subrole })
+      ] })
+    ] }) }, index2)) })
+  ] });
+};
 function TeamPage() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-zinc-50 ", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Team, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(tesm, {})
+    /* @__PURE__ */ jsxRuntimeExports.jsx(tesm, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(AdvisoryCommitteeDetails, {})
   ] });
 }
 function ContactForm() {
