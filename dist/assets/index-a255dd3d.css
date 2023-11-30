@@ -3134,9 +3134,6 @@ input:checked + .toggle-bg {
 .first\:pt-0:first-child {
   padding-top: 0px;
 }
-.first\:font-medium:first-child {
-  font-weight: 500;
-}
 .last\:mr-0:last-child {
   margin-right: 0px;
 }

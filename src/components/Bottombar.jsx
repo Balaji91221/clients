@@ -80,9 +80,7 @@ function Bottombar() {
           </div>
         </div>
         {/* Website developed with heart symbol */}
-        <div className="text-center mt-4">
-          Website developed ❤️ by K Balaji Naik
-        </div>
+       
       </div>
     </Footer>
   );

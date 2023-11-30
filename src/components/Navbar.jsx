@@ -33,7 +33,6 @@ function Navbar() {
     { link: "Startup", path: "/startup" },
     { link: "Team", path: "/team" },
     { link: "Event", path: "/EventPage" },
-   
     { link: "Contact", path: "/contact" },
   ];
 
@@ -54,14 +53,14 @@ function Navbar() {
           </RouterLink>
           <ul className="md:flex space-x-12 hidden">
             {navItems.map(({ link, path }) => (
-              <RouterLink // Use RouterLink for other navigation links
-                to={path}
-                
-                key={path}
-                className="block text-base text-gray-900 hover:underline hover:text-brandPrimary first:font-medium"
-              >
-                {link}
-              </RouterLink>
+             <RouterLink
+             to={path}
+             key={path}
+             className="block text-lg text-gray-900 hover:underline hover:text-brandPrimary font-medium"
+           >
+             {link}
+           </RouterLink>
+           
             ))}
           </ul>
 

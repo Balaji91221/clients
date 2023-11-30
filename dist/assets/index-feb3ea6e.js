@@ -9286,7 +9286,7 @@ function Navbar() {
             Link,
             {
               to: path,
-              className: "block text-base text-gray-900 hover:underline hover:text-brandPrimary first:font-medium",
+              className: "block text-lg text-gray-900 hover:underline hover:text-brandPrimary font-medium",
               children: link
             },
             path
@@ -19298,8 +19298,7 @@ function Bottombar() {
           }
         )
       ] })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mt-4", children: "Website developed ❤️ by K Balaji Naik" })
+    ] })
   ] }) });
 }
 function Team() {
@@ -19473,7 +19472,7 @@ const leadersData = [
     subrole: "VIT TBI Incubation Center"
   },
   {
-    name: "Mr.Ravi Eswarapu",
+    name: " Mr. Ravi Eswarapu",
     image: ravi,
     role: "TIEAP President",
     subrole: "CEO aHUB (Andhra University)"
@@ -19491,9 +19490,9 @@ const AdvisoryCommitteeDetails = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { role: "list", className: "grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-2", children: leadersData.map((leader, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-y-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "h-40 w-40 rounded", src: leader.image, alt: "" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 tracking-tight text-gray-900", children: leader.name }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-indigo-600", children: leader.role }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-indigo-600", children: leader.subrole })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 text-center tracking-tight text-gray-900", children: leader.name }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-center text-indigo-600", children: leader.role }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-center text-indigo-600", children: leader.subrole })
       ] })
     ] }) }, index2)) })
   ] });
