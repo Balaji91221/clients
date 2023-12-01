@@ -14,7 +14,7 @@ function Services() {
           <p className="text-pink-500 text-lg font-semibold mb-2">
             − About Us −
           </p>
-          <p className="text-black-500 text-lg font-semibold ">Why You Should Join VTBIF Incubation Center Innovate & Ignite</p>
+          <p className="text-black-500 text-lg text-center font-semibold ">Why You Should Join VTBIF Incubation Center Innovate & Ignite</p>
         </div>
         <div className="md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center m-4 gap-12">
         <div>

@@ -25,7 +25,7 @@ export default function DefaultAccordion() {
             </p>
             <a
               className="text-cyan-600 hover:underline dark:text-cyan-500"
-              href="https://flowbite.com/docs/getting-started/introduction/"
+              href="/"
             >
               <p>
                 get started

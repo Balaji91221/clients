@@ -5,7 +5,7 @@ function ContactForm() {
   const directorInfo = [
     {
       name: 'Dr. Ameet Chavan',
-      email: 'director.iiec@vitap.ac.in',
+      email: 'director@vtbif.org',
       phone: '123-456-7890',
     },
   ];

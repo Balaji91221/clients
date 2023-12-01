@@ -36,7 +36,7 @@ const Sidebar = () => {
             {popularBlog.slice(6, 10).map((blog) => (
               <div className='my-5 border-b-2 border-spacing-2 px-4' key={blog.id}>
                 <h4 className='font-medium mb-2'>{blog.title}</h4>
-                <Link to={`/EventPage/${blog.id}`} className='inline-flex items-center pb-2 text-base hover:text-orange-500'>
+                <Link to={`/EventPage/${blog.id}`} className='inline-flex items-center pb-2 text-base hover:text-pink-500'>
                   Read now <FaArrowRight className='mt-1 ml-2' />
                 </Link>
               </div>

@@ -9016,7 +9016,7 @@ const Sidebar = () => {
       /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mt-20 px-4", children: "Popular Now" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: popularBlog.slice(6, 10).map((blog) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "my-5 border-b-2 border-spacing-2 px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-medium mb-2", children: blog.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/EventPage/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-orange-500", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: `/EventPage/${blog.id}`, className: "inline-flex items-center pb-2 text-base hover:text-pink-500", children: [
           "Read now ",
           /* @__PURE__ */ jsxRuntimeExports.jsx(FaArrowRight, { className: "mt-1 ml-2" })
         ] })
@@ -19073,7 +19073,7 @@ function DefaultAccordion() {
               "a",
               {
                 className: "text-cyan-600 hover:underline dark:text-cyan-500",
-                href: "https://flowbite.com/docs/getting-started/introduction/",
+                href: "/",
                 children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "get started" })
               }
             )
@@ -19166,7 +19166,7 @@ function Services() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: " px-4 lg:px-14 max-w-screen-2xl mx-auto my-8 py-8 bg-white", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-8", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold mb-2", children: "− About Us −" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg font-semibold ", children: "Why You Should Join VTBIF Incubation Center Innovate & Ignite" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg text-center font-semibold ", children: "Why You Should Join VTBIF Incubation Center Innovate & Ignite" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "md:w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center m-4 gap-12", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logo, alt: "", className: "h-80 rounded-md py-12" }) }),
@@ -19426,7 +19426,10 @@ const leadersData$1 = [
 ];
 function tesm() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-white py-24 sm:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold", children: "− Our Team −" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-pink-500 text-lg font-semibold", children: "−  Our Team  −" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-black-500 text-lg font-semibold", children: "Our team is here to make a difference and create positive outcomes." })
+    ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl", children: "Meet Our Dynamic Incubation Center Team" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg leading-8 text-gray-600", children: "Discover the faces behind VT-BIF, a team dedicated to innovation and startup success. From visionary leaders to skilled advisors and R&D enthusiasts, we collaborate to shape the future of technology. Join us on this exciting journey!" })
@@ -19434,8 +19437,8 @@ function tesm() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { role: "list", className: "grid gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-y-16 xl:col-span-2", children: leadersData$1.map((leader, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-y-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "h-36 w-32 rounded", src: leader.image, alt: "" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 tracking-tight text-gray-900", children: leader.name }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-indigo-600", children: leader.role })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-base font-semibold leading-7 tracking-tight text-center text-gray-900", children: leader.name }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold leading-6 text-center text-indigo-600", children: leader.role })
       ] })
     ] }) }, index2)) })
   ] }) });
@@ -19508,7 +19511,7 @@ function ContactForm() {
   const directorInfo = [
     {
       name: "Dr. Ameet Chavan",
-      email: "director.iiec@vitap.ac.in",
+      email: "director@vtbif.org",
       phone: "123-456-7890"
     }
   ];
